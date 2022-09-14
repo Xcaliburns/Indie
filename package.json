@@ -1,0 +1,11 @@
+{
+  "name": "indie-main",
+  "version": "1.0.0",
+  "description": "projet site jeu indes",
+  "main": "app.js",
+  "scripts": {
+    "sass": "sass --watch ./Indie-main/main.scss:./public/css/style.css"
+  },
+  "author": "david abruzzo",
+  "license": "ISC"
+}
