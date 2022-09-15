@@ -24,4 +24,34 @@ html {
     height: auto;
   }
 
-  
+
+  /*mon style*/
+  $base-color: #515666;
+  $header-color:#242424;
+  $ul-color:#1a01fc;
+  body{
+    background:$base-color;
+
+    header{
+      display: flex;
+      flex-direction: column;
+      h1{
+        position: absolute;
+      }
+
+      background: $header-color;
+
+      nav{
+        margin-top:50px;
+        font-size: 25px;
+        ul{display: flex;
+            flex-direction: row;
+          background-color: $ul-color;  
+          width: 100%;
+          li{
+            border-right: 1px solid #bbb;
+            
+          }
+      }
+    }
+  }}

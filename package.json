@@ -4,7 +4,7 @@
   "description": "projet site jeu indes",
   "main": "app.js",
   "scripts": {
-    "sass": "sass --watch ./Indie-main/main.scss:./public/css/style.css"
+    "sass": "sass --watch ./main.scss:./style.css"
   },
   "author": "david abruzzo",
   "license": "ISC"
