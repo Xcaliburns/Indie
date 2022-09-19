@@ -44,9 +44,7 @@ html {
         margin-top: 2rem;         
         text-align: center;
         font-size: 3rem;
-      }
-
-      
+      }      
 
       nav{
         position: absolute;
@@ -87,8 +85,7 @@ html {
         top: 0;
         left: 0;
         opacity: 0;
-        transition:opacity 0.5s;
-       
+        transition:opacity 0.5s;       
       }
       img.active{
         opacity: 1;
@@ -104,8 +101,35 @@ html {
       .suivant{
         right: 1rem;
       }
-      >precedent{
+      .precedent{
         left: 1rem;
+      }
+    }
+    .actu{
+      
+      width: 100vh;
+      font-size: 30px;
+      margin-top: 2rem;
+      margin-left: auto;
+      margin-right: auto;
+      background-color:$header-color;
+      position:relative;
+     
+      ul{ 
+          height: 20rem;
+          text-justify: auto;
+          display: flex;
+          flex-direction: column;
+          border  : 2px solid #bbb;
+          width: 100%;
+          margin-right : 5% ;
+          position: center;
+          overflow-y: scroll;
+          
+          li{
+            text-align: left  ;
+            padding: 0,5rem;         
+          }
       }
     }
   }
