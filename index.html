@@ -4,24 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Indie World</title>
 </head>
 <body>
     <header>
-       <div> <h1>Indie World</h1></div>
+        <div> 
+            <h1>Indie World</h1>
+        </div>
         <nav>
-<div>
-    <ul>
-        <li><a href="#">accueil</a></li>
-        <li><a href="#">nouveautes</a></li>
-        <li><a href="#">les meilleurs jeux</a></li>
-        <li><a href="#">forum</a></li>
-        <li><a href="#">contact</a></li>
-    </ul>
-</div>
+            <div>
+                <ul>
+                    <li><a href="#"> accueil </a></li>
+                    <li><a href="#"> nouveautes </a></li>
+                    <li><a href="#"> les meilleurs jeux </a></li>
+                    <li><a href="#"> forum </a></li>
+                    <li><a href="#"> contact </a></li>
+                </ul>
+            </div>
         </nav>
     </header>
+
+    <main>
+            <div class="slider">
+                <img src="images/image001.png" alt="image001" class="image__slider active" /> 
+                <img src="images/image002.png" alt="image002" class="image__slider"/> 
+                <img src="images/image003.png" alt="image003" class="image__slider"/> 
+                <div class ="suivant">
+                    <i class="fa-solid fa-circle-chevron-right"></i>
+                </div>
+                <div class="precedent">
+                    <i class="fa-solid fa-circle-chevron-left"></i>
+                </div>
+            </div>
+    </main>
 <script src="app.js"></script>    
 </body>
 </html>

@@ -30,23 +30,67 @@ body {
 body header {
   display: flex;
   flex-direction: column;
-  background: #242424;
+  background: #88a6cc;
+  width: justify;
+  height: 10rem;
 }
 body header h1 {
-  position: absolute;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 3rem;
 }
 body header nav {
+  position: absolute;
+  top: 75px;
+  right: 0px;
   margin-top: 50px;
-  font-size: 25px;
+  margin-right: 2%;
+  font-size: 30px;
 }
 body header nav ul {
+  text-justify: auto;
   display: flex;
   flex-direction: row;
   background-color: #1a01fc;
   width: 100%;
+  margin-right: 5%;
 }
 body header nav ul li {
-  border-right: 1px solid #bbb;
+  text-align: center;
+  border-right: 2px solid #bbb;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+body main .slider {
+  height: 80vh;
+  position: relative;
+}
+body main .slider img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+body main .slider img.active {
+  opacity: 1;
+}
+body main .slider .suivant, body main .slider .precedent {
+  color: white;
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+body main .slider .suivant {
+  right: 1rem;
+}
+body main .slider > precedent {
+  left: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
