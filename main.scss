@@ -32,8 +32,7 @@ html {
   body{
     background:$base-color;
 
-    header{
-      
+    header{      
       display: flex;
       flex-direction: column;
       background: $header-color;
@@ -73,6 +72,7 @@ html {
   }
 
     main{
+      
     .slider{
       height: 80vh;
       position: relative;
@@ -105,18 +105,25 @@ html {
         left: 1rem;
       }
     }
+
+    .colonnePrincipale{
+      display: flex;
+      flex-direction: column;
+      margin:2rem;
+      width: 150vh;
+      position: absolute;
+      left: 0%;
     .actu{
       
-      width: 100vh;
+      width: 80vh;
       font-size: 30px;
       margin-top: 2rem;
       margin-left: auto;
       margin-right: auto;
       background-color:$header-color;
-      position:relative;
-     
+      position:relative;     
       ul{ 
-          height: 20rem;
+          height: 15rem;
           text-justify: auto;
           display: flex;
           flex-direction: column;
@@ -132,5 +139,30 @@ html {
           }
       }
     }
+    .article{
+      height: 10rem;
+      width: 80vh;
+      font-size: 30px;
+      margin-top: 2rem;
+      margin-left: auto;
+      margin-right: auto;
+      background-color:$header-color;
+      position:relative;
+    }
+    }
+  }
+
+  footer{    
+    background:#ccc;
+
+position:absolute;
+
+bottom:0;
+
+width:100%;
+
+padding-top:50px;
+
+height:50px;
   }
 }

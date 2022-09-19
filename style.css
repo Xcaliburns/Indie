@@ -92,8 +92,16 @@ body main .slider .suivant {
 body main .slider .precedent {
   left: 1rem;
 }
-body main .actu {
-  width: 100vh;
+body main .colonnePrincipale {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  width: 150vh;
+  position: absolute;
+  left: 0%;
+}
+body main .colonnePrincipale .actu {
+  width: 80vh;
   font-size: 30px;
   margin-top: 2rem;
   margin-left: auto;
@@ -101,8 +109,8 @@ body main .actu {
   background-color: #88a6cc;
   position: relative;
 }
-body main .actu ul {
-  height: 20rem;
+body main .colonnePrincipale .actu ul {
+  height: 15rem;
   text-justify: auto;
   display: flex;
   flex-direction: column;
@@ -112,9 +120,27 @@ body main .actu ul {
   position: center;
   overflow-y: scroll;
 }
-body main .actu ul li {
+body main .colonnePrincipale .actu ul li {
   text-align: left;
   padding: 0, 5rem;
+}
+body main .colonnePrincipale .article {
+  height: 10rem;
+  width: 80vh;
+  font-size: 30px;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #88a6cc;
+  position: relative;
+}
+body footer {
+  background: #ccc;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 50px;
+  height: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
