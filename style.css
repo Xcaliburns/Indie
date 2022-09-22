@@ -30,6 +30,8 @@ body {
   flex-direction: column;
 }
 
+/*variables*/
+/*mixins*/
 body {
   background: #515666;
 }
@@ -106,12 +108,11 @@ body main .colonnes .colonnePrincipale {
   display: flex;
   flex-direction: column;
   margin: 2rem;
-  width: 150vh;
+  width: 10vh;
   position: relative;
-  left: 0%;
 }
 body main .colonnes .colonnePrincipale .actu {
-  width: 80vh;
+  width: 50vh;
   font-size: 30px;
   margin-top: 2rem;
   margin-left: auto;
@@ -134,9 +135,9 @@ body main .colonnes .colonnePrincipale .actu ul li {
   text-align: left;
   padding: 0, 5rem;
 }
-body main .colonnes .colonnePrincipale .article {
+body main .colonnes .colonnePrincipale .timbre {
   height: 10rem;
-  width: 80vh;
+  width: 50vh;
   font-size: 30px;
   margin-top: 2rem;
   margin-left: auto;
@@ -147,6 +148,19 @@ body main .colonnes .colonnePrincipale .article {
 body main .colonnes .colonneSecondaire {
   display: flex;
   flex-direction: column;
+  margin: 2rem;
+  width: 150vh;
+  position: absolute;
+}
+body main .colonnes .colonneSecondaire .timbre {
+  height: 10rem;
+  width: 50vh;
+  font-size: 30px;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #88a6cc;
+  position: relative;
 }
 body footer {
   position: relative;

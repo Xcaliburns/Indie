@@ -35,10 +35,24 @@ html {
     
  }
   
-
+/*variables*/
   $base-color: #515666;
   $header-color:#88a6cc;
   $ul-color:#1a01fc;
+
+/*mixins*/
+@mixin article {  
+      height: 10rem;
+      width: 50vh;
+      font-size: 30px;
+      margin-top: 2rem;
+      margin-left: auto;
+      margin-right: auto;
+      background-color:$header-color;
+      position:relative;    
+}  
+
+
   body
 {
     background:$base-color;
@@ -83,8 +97,7 @@ html {
   }
 
     main{
-      
-      
+     
     .slider{
       height: 80vh;
       position: relative;
@@ -124,12 +137,12 @@ html {
       display: flex;
       flex-direction: column;
       margin:2rem;
-      width: 150vh;
+      width: 10vh;
       position: relative;
-      left: 0%;
+      
     .actu{
       
-      width: 80vh;
+      width: 50vh;
       font-size: 30px;
       margin-top: 2rem;
       margin-left: auto;
@@ -153,9 +166,9 @@ html {
           }
       }
     }
-    .article{
+    .timbre{
       height: 10rem;
-      width: 80vh;
+      width: 50vh;
       font-size: 30px;
       margin-top: 2rem;
       margin-left: auto;
@@ -167,6 +180,20 @@ html {
     .colonneSecondaire{
       display: flex;
       flex-direction: column;
+      margin:2rem;
+      width: 150vh;
+      position: absolute;
+      
+       .timbre{
+      height: 10rem;
+      width: 50vh;
+      font-size: 30px;
+      margin-top: 2rem;
+      margin-left: auto;
+      margin-right: auto;
+      background-color:$header-color;
+      position:relative;
+    }
     }
     }
   }
