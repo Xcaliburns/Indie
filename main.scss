@@ -3,6 +3,7 @@
 html {
     box-sizing: border-box;
     font-size: 16px;
+    height: 100%;
   }
   
   *, *:before, *:after {
@@ -26,10 +27,20 @@ html {
 
 
   /*mon style*/
+
+  body{
+   
+    display: flex;
+       flex-direction: column;
+    
+ }
+  
+
   $base-color: #515666;
   $header-color:#88a6cc;
   $ul-color:#1a01fc;
-  body{
+  body
+{
     background:$base-color;
 
     header{      
@@ -73,6 +84,7 @@ html {
 
     main{
       
+      
     .slider{
       height: 80vh;
       position: relative;
@@ -105,13 +117,15 @@ html {
         left: 1rem;
       }
     }
-
+    .colonnes{
+      display: flex;
+      flex-direction: row;
     .colonnePrincipale{
       display: flex;
       flex-direction: column;
       margin:2rem;
       width: 150vh;
-      position: absolute;
+      position: relative;
       left: 0%;
     .actu{
       
@@ -150,19 +164,22 @@ html {
       position:relative;
     }
     }
+    .colonneSecondaire{
+      display: flex;
+      flex-direction: column;
+    }
+    }
   }
 
-  footer{    
-    background:#ccc;
-
-position:absolute;
-
-bottom:0;
-
-width:100%;
-
-padding-top:50px;
-
-height:50px;
+  footer{ 
+    position: relative;
+    width: 75%;
+    font-size: 30px;
+    text-align: center;
+    background:#ccc;    
+    padding-top:50px;
+    margin-left: auto;
+    margin-right: auto;
+    
   }
 }

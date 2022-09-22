@@ -2,6 +2,7 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+  height: 100%;
 }
 
 *, *:before, *:after {
@@ -24,6 +25,11 @@ img {
 }
 
 /*mon style*/
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   background: #515666;
 }
@@ -92,15 +98,19 @@ body main .slider .suivant {
 body main .slider .precedent {
   left: 1rem;
 }
-body main .colonnePrincipale {
+body main .colonnes {
+  display: flex;
+  flex-direction: row;
+}
+body main .colonnes .colonnePrincipale {
   display: flex;
   flex-direction: column;
   margin: 2rem;
   width: 150vh;
-  position: absolute;
+  position: relative;
   left: 0%;
 }
-body main .colonnePrincipale .actu {
+body main .colonnes .colonnePrincipale .actu {
   width: 80vh;
   font-size: 30px;
   margin-top: 2rem;
@@ -109,7 +119,7 @@ body main .colonnePrincipale .actu {
   background-color: #88a6cc;
   position: relative;
 }
-body main .colonnePrincipale .actu ul {
+body main .colonnes .colonnePrincipale .actu ul {
   height: 15rem;
   text-justify: auto;
   display: flex;
@@ -120,11 +130,11 @@ body main .colonnePrincipale .actu ul {
   position: center;
   overflow-y: scroll;
 }
-body main .colonnePrincipale .actu ul li {
+body main .colonnes .colonnePrincipale .actu ul li {
   text-align: left;
   padding: 0, 5rem;
 }
-body main .colonnePrincipale .article {
+body main .colonnes .colonnePrincipale .article {
   height: 10rem;
   width: 80vh;
   font-size: 30px;
@@ -134,13 +144,19 @@ body main .colonnePrincipale .article {
   background-color: #88a6cc;
   position: relative;
 }
+body main .colonnes .colonneSecondaire {
+  display: flex;
+  flex-direction: column;
+}
 body footer {
+  position: relative;
+  width: 75%;
+  font-size: 30px;
+  text-align: center;
   background: #ccc;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   padding-top: 50px;
-  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
