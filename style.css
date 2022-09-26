@@ -101,6 +101,7 @@ body main {
   margin-bottom: 2rem;
 }
 body main .slider {
+  border-bottom: 3rem solid rgba(9, 31, 90, 0.298);
   height: 50vh;
   position: relative;
   width: 102vh;
@@ -157,7 +158,7 @@ body main .colonnes .colonnePrincipale .actu {
   margin-right: auto;
   background-color: #88a6cc;
   position: relative;
-  border-bottom: 3rem solid rgba(9, 31, 90, 0.679);
+  border-bottom: 3rem solid rgba(9, 31, 90, 0.298);
   /*width: 50vh;
   font-size: 30px;
   margin-top: 2rem;
@@ -172,6 +173,11 @@ body main .colonnes .colonnePrincipale .actu {
 body main .colonnes .colonnePrincipale .actu a {
   color: black;
   text-decoration: none;
+}
+body main .colonnes .colonnePrincipale .actu h2 {
+  font-size: 30px;
+  position: absolute;
+  bottom: -3rem;
 }
 body main .colonnes .colonnePrincipale .actu ul {
   height: 15rem;
@@ -197,12 +203,17 @@ body main .colonnes .colonnePrincipale .timbre {
   margin-right: auto;
   background-color: #88a6cc;
   position: relative;
-  border-bottom: 3rem solid rgba(9, 31, 90, 0.679);
+  border-bottom: 3rem solid rgba(9, 31, 90, 0.298);
   background-color: #88a6cc;
 }
 body main .colonnes .colonnePrincipale .timbre a {
   color: black;
   text-decoration: none;
+}
+body main .colonnes .colonnePrincipale .timbre h2 {
+  font-size: 30px;
+  position: absolute;
+  bottom: -3rem;
 }
 body main .colonnes .colonneSecondaire {
   display: flex;
@@ -220,11 +231,16 @@ body main .colonnes .colonneSecondaire .timbre {
   margin-right: auto;
   background-color: #88a6cc;
   position: relative;
-  border-bottom: 3rem solid rgba(9, 31, 90, 0.679);
+  border-bottom: 3rem solid rgba(9, 31, 90, 0.298);
 }
 body main .colonnes .colonneSecondaire .timbre a {
   color: black;
   text-decoration: none;
+}
+body main .colonnes .colonneSecondaire .timbre h2 {
+  font-size: 30px;
+  position: absolute;
+  bottom: -3rem;
 }
 body footer {
   position: relative;
@@ -233,6 +249,42 @@ body footer {
   text-align: center;
   background: #ccc;
   padding-top: 50px;
+}
+
+/*  regles media query*/
+/*galaxynote20*/
+@media only screen and (max-width: 1500px) {
+  body header nav {
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+  }
+  body header nav ul {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  body main .slider {
+    border-bottom: 3rem solid rgba(9, 31, 90, 0.298);
+    height: 30vh;
+    position: relative;
+    width: 45vh;
+    margin: auto;
+    margin-top: 2vh;
+  }
+  body main .colonnes {
+    display: flex;
+    flex-direction: column;
+  }
+  body main .colonnes .colonnePrincipale {
+    width: auto;
+    margin: auto;
+  }
+  body main .colonnes .colonneSecondaire {
+    width: auto;
+    margin: auto;
+    position: relative;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
