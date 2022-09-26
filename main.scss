@@ -1,218 +1,227 @@
-/*reset css a voir suivant les performances*/
-
-html {
-    box-sizing: border-box;
-    font-size: 16px;
-    height: 100%;
+    /*reset css a voir suivant les performances*/
     
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
-    
-  }
-  
-  ol, ul {
-    list-style: none;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-
-  /*mon style*/
-
-  body{
-   
-    display: flex;
-       flex-direction: column;
-    
- }
-  
-/*variables*/
-  $base-color: #515666;
-  $header-color:#88a6cc;
-  $ul-color:#1a01fc;
-  $bandeau-color:rgb(9, 30, 90);
-
-/*mixins*/
-@mixin article {  
-      height: 10rem;
-      width: 44vh;
-      font-size: 30px;
-      margin-top: 2rem;
-      margin-left: auto;
-      margin-right: auto;
-      background-color:$header-color;
-      position:relative;    
-}  
-
-@mixin bandeau {
-  background-color: $bandeau-color;
-  height: 10vh;
-  width:100%;
-  position: relative;
-  
-}
-
-
-
-  body
-{
-    background:$base-color;
-
-    header{      
-      display: flex;
-      flex-direction: column;
-      background: $header-color;
-      width: justify;
-      height: 10rem;
-      .bandeau{
-        @include bandeau;
-      }
-      h1{   
-        margin-top: 2rem;         
-        text-align: center;
-        font-size: 3rem;
-      }      
-
-      nav{
-        position: absolute;
-        top: 75px;
-        right: 0px;
-        margin-top:50px;
-        margin-right: 2%;
-        font-size: 30px;
-        background-color:$bandeau-color ;
-        
-          
-                  ul{
-          text-justify: auto;
-          display: flex;
-          flex-direction: row;
-          background-color: $ul-color;  
-          width: 100%;
-          margin-right : 5% ;
-          
-          li{
-            text-align: center  ;
-            border-right: 2px solid #bbb; 
-            padding-right: 1rem;  
-            padding-left: 1rem;         
-          }
-      }
-    }
-  }
-
-    main{
-     
-    .slider{
-      height:50vh;
-      position: relative;
-      width: 100vh;
-      margin: auto;
-      margin-top: 2vh;
-
-      img{
-        object-fit: cover;
+    html {
+        box-sizing: border-box;
+        font-size: 16px;
         height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        transition:opacity 0.5s;       
-      }
-      img.active{
-        opacity: 1;
-      }
-      .suivant,.precedent{
-          color: #ffff;
-          font-size: 3rem;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          cursor: pointer;
-      }
-      .suivant{
-        right: 1rem;
-      }
-      .precedent{
-        left: 1rem;
-      }
     }
-    .colonnes{
-      display: flex;
-      flex-direction: row;
-      width: 100vh;
-      margin: auto;
-    .colonnePrincipale{
-      display: flex;
-      flex-direction: column;
-      margin-right:2rem;
-      width: 10vh;
-      position: relative;
-      
-    .actu{
-      
-      width: 50vh;
-      font-size: 30px;
-      margin-top: 2rem;
-      margin-left: auto;
-      margin-right: auto;
-      background-color:$header-color;
-      position:relative;     
-      ul{ 
-          height: 15rem;
-          text-justify: auto;
-          display: flex;
-          flex-direction: column;
-          border  : 2px solid #bbb;
-          width: 100%;
-          margin-right : 5% ;
-          position: center;
-          overflow-y: scroll;
-          
-          li{
-            text-align: left  ;
-            padding: 0,5rem;         
-          }
-      }
-    }
-    .timbre{
-      @include article;
-    }
-    }
-    .colonneSecondaire{
-      display: flex;
-      flex-direction: column;
-      margin:2rem;
-      width: 150vh;
-      position: absolute;
-      
-       .timbre{
-      @include article;
-    }
-    }
-    }
-  }
-
-  footer{ 
-    position: relative;
-    width:100%;
-    font-size: 30px;
-    text-align: center;
-    background:#ccc;    
-    padding-top:50px;
-   
     
-  }
-}
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+    
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ol,
+    ul {
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+    }
+    
+    ol,
+    ul {
+        list-style: none;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    a {
+        cursor: pointer;
+    }
+    /*mon style*/
+    
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    /*variables*/
+    
+    $base-color: #515666;
+    $header-color:#88a6cc;
+    $ul-color:#1a01fc;
+    $bandeau-color:rgb(9, 30, 90);
+    $liseret-color:rgba(9, 31, 90, 0.679);
+    /*mixins*/
+    
+    @mixin article {
+        height: 15rem;
+        width: 50vh;
+        font-size: 30px;
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: $header-color;
+        position: relative;
+        border-bottom: 3rem solid $liseret-color;
+        a {
+            color: black;
+            text-decoration: none;
+        }
+    }
+    
+    @mixin bandeau {
+        background-color: $bandeau-color;
+        height: 8vh;
+        width: 100%;
+        position: relative;
+    }
+    
+    body {
+        background: $base-color;
+        header {
+            display: flex;
+            flex-direction: column;
+            background: $header-color;
+            width: justify;
+            height: 10rem;
+            .bandeau {
+                @include bandeau;
+            }
+            h1 {
+                margin-top: 2rem;
+                text-align: center;
+                font-size: 3rem;
+            }
+            nav {
+                position: absolute;
+                bottom: 25%;
+                right: 0px;
+                margin-top: 50px;
+                margin-right: 2%;
+                font-size: 30px;
+                background-color: $bandeau-color;
+                ul {
+                    text-justify: auto;
+                    display: flex;
+                    flex-direction: row;
+                    background-color: $ul-color;
+                    color: white;
+                    width: 100%;
+                    margin-right: 5%;
+                    li {
+                        text-align: center;
+                        border-right: 2px solid #bbb;
+                        padding-right: 1rem;
+                        padding-left: 1rem;
+                        a {
+                            color: white;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+        main {
+            margin-bottom: 2rem;
+            .slider {
+                height: 50vh;
+                position: relative;
+                width: 102vh;
+                margin: auto;
+                margin-top: 2vh;
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    transition: opacity 0.5s;
+                }
+                img.active {
+                    opacity: 1;
+                }
+                .suivant,
+                .precedent {
+                    color: #ffff;
+                    font-size: 3rem;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+                }
+                .suivant {
+                    right: 1rem;
+                }
+                .precedent {
+                    left: 1rem;
+                }
+            }
+            .colonnes {
+                display: flex;
+                flex-direction: row;
+                width: 101vh;
+                margin: auto;
+                .colonnePrincipale {
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: 2rem;
+                    width: 10vh;
+                    position: relative;
+                    .actu {
+                        @include article;
+                        /*width: 50vh;
+                    font-size: 30px;
+                    margin-top: 2rem;
+                    margin-left: auto;
+                    margin-right: auto;
+                    background-color: $header-color;
+                    position: relative;*/
+                        border: 2px solid #bbb;
+                        overflow-wrap: normal;
+                        overflow-y: auto;
+                        ul {
+                            height: 15rem;
+                            text-justify: auto;
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                            margin-right: 5%;
+                            position: center;
+                            li {
+                                text-align: left;
+                                margin-left: 1%;
+                                margin-bottom: 1%;
+                                padding: 0, 5rem;
+                            }
+                        }
+                    }
+                    .timbre {
+                        @include article;
+                        background-color: $header-color;
+                    }
+                }
+                .colonneSecondaire {
+                    display: flex;
+                    flex-direction: column;
+                    width: 69%;
+                    margin-left: 3rem;
+                    position: absolute;
+                    .timbre {
+                        @include article;
+                    }
+                }
+            }
+        }
+        footer {
+            position: relative;
+            width: 100%;
+            font-size: 30px;
+            text-align: center;
+            background: #ccc;
+            padding-top: 50px;
+        }
+    }

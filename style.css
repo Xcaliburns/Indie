@@ -5,23 +5,39 @@ html {
   height: 100%;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+a {
+  cursor: pointer;
 }
 
 /*mon style*/
@@ -44,7 +60,7 @@ body header {
 }
 body header .bandeau {
   background-color: rgb(9, 30, 90);
-  height: 10vh;
+  height: 8vh;
   width: 100%;
   position: relative;
 }
@@ -55,7 +71,7 @@ body header h1 {
 }
 body header nav {
   position: absolute;
-  top: 75px;
+  bottom: 25%;
   right: 0px;
   margin-top: 50px;
   margin-right: 2%;
@@ -67,6 +83,7 @@ body header nav ul {
   display: flex;
   flex-direction: row;
   background-color: #1a01fc;
+  color: white;
   width: 100%;
   margin-right: 5%;
 }
@@ -76,10 +93,17 @@ body header nav ul li {
   padding-right: 1rem;
   padding-left: 1rem;
 }
+body header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+body main {
+  margin-bottom: 2rem;
+}
 body main .slider {
   height: 50vh;
   position: relative;
-  width: 100vh;
+  width: 102vh;
   margin: auto;
   margin-top: 2vh;
 }
@@ -96,7 +120,8 @@ body main .slider img {
 body main .slider img.active {
   opacity: 1;
 }
-body main .slider .suivant, body main .slider .precedent {
+body main .slider .suivant,
+body main .slider .precedent {
   color: white;
   font-size: 3rem;
   position: absolute;
@@ -113,7 +138,7 @@ body main .slider .precedent {
 body main .colonnes {
   display: flex;
   flex-direction: row;
-  width: 100vh;
+  width: 101vh;
   margin: auto;
 }
 body main .colonnes .colonnePrincipale {
@@ -124,55 +149,82 @@ body main .colonnes .colonnePrincipale {
   position: relative;
 }
 body main .colonnes .colonnePrincipale .actu {
+  height: 15rem;
   width: 50vh;
   font-size: 30px;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
   background-color: #88a6cc;
   position: relative;
+  border-bottom: 3rem solid rgba(9, 31, 90, 0.679);
+  /*width: 50vh;
+  font-size: 30px;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $header-color;
+  position: relative;*/
+  border: 2px solid #bbb;
+  overflow-wrap: normal;
+  overflow-y: auto;
+}
+body main .colonnes .colonnePrincipale .actu a {
+  color: black;
+  text-decoration: none;
 }
 body main .colonnes .colonnePrincipale .actu ul {
   height: 15rem;
   text-justify: auto;
   display: flex;
   flex-direction: column;
-  border: 2px solid #bbb;
   width: 100%;
   margin-right: 5%;
   position: center;
-  overflow-y: scroll;
 }
 body main .colonnes .colonnePrincipale .actu ul li {
   text-align: left;
+  margin-left: 1%;
+  margin-bottom: 1%;
   padding: 0, 5rem;
 }
 body main .colonnes .colonnePrincipale .timbre {
-  height: 10rem;
-  width: 44vh;
+  height: 15rem;
+  width: 50vh;
   font-size: 30px;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
   background-color: #88a6cc;
   position: relative;
+  border-bottom: 3rem solid rgba(9, 31, 90, 0.679);
+  background-color: #88a6cc;
+}
+body main .colonnes .colonnePrincipale .timbre a {
+  color: black;
+  text-decoration: none;
 }
 body main .colonnes .colonneSecondaire {
   display: flex;
   flex-direction: column;
-  margin: 2rem;
-  width: 150vh;
+  width: 69%;
+  margin-left: 3rem;
   position: absolute;
 }
 body main .colonnes .colonneSecondaire .timbre {
-  height: 10rem;
-  width: 44vh;
+  height: 15rem;
+  width: 50vh;
   font-size: 30px;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
   background-color: #88a6cc;
   position: relative;
+  border-bottom: 3rem solid rgba(9, 31, 90, 0.679);
+}
+body main .colonnes .colonneSecondaire .timbre a {
+  color: black;
+  text-decoration: none;
 }
 body footer {
   position: relative;
