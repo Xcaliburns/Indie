@@ -3,6 +3,7 @@ html {
   box-sizing: border-box;
   font-size: 16px;
   height: 100%;
+  width: 100%;
 }
 
 *,
@@ -34,6 +35,7 @@ ul {
 img {
   max-width: 100%;
   height: auto;
+  cursor: pointer;
 }
 
 a {
@@ -42,8 +44,14 @@ a {
 
 /*mon style*/
 body {
+  width: 100%;
   display: flex;
   flex-direction: column;
+}
+body .titreVignette {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 /*variables*/
@@ -125,7 +133,7 @@ body main {
   margin-bottom: 2rem;
 }
 body main .slider {
-  border-bottom: 3rem solid rgba(9, 31, 90, 0.298);
+  border-bottom: 3rem solid rgba(9, 31, 90, 0.779);
   height: 50vh;
   position: relative;
   width: 102vh;
@@ -160,11 +168,23 @@ body main .slider .suivant {
 body main .slider .precedent {
   left: 1rem;
 }
+body main .slider h2 {
+  font-size: 40px;
+  color: black;
+  position: absolute;
+  left: 45%;
+  bottom: -3rem;
+}
 body main .colonnes {
   display: flex;
   flex-direction: row;
+  justify-items: center;
   width: 101vh;
   margin: auto;
+}
+body main .colonnes img {
+  position: relative;
+  z-index: -1;
 }
 body main .colonnes .colonnePrincipale {
   display: flex;
@@ -175,14 +195,13 @@ body main .colonnes .colonnePrincipale {
 }
 body main .colonnes .colonnePrincipale .actu {
   height: 15rem;
-  width: 50vh;
-  font-size: 30px;
+  width: 450px;
+  font-size: 20px;
   margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
-  background-color: #88a6cc;
   position: relative;
-  border-bottom: 3rem solid rgba(9, 31, 90, 0.298);
+  border-bottom: 3rem solid rgba(9, 31, 90, 0.779);
   /*width: 50vh;
   font-size: 30px;
   margin-top: 2rem;
@@ -190,7 +209,7 @@ body main .colonnes .colonnePrincipale .actu {
   margin-right: auto;
   background-color: $header-color;
   position: relative;*/
-  border: 2px solid #bbb;
+  border: 5px solid #bbb;
   overflow-wrap: normal;
   overflow-y: auto;
 }
@@ -220,15 +239,13 @@ body main .colonnes .colonnePrincipale .actu ul li {
 }
 body main .colonnes .colonnePrincipale .timbre {
   height: 15rem;
-  width: 50vh;
-  font-size: 30px;
+  width: 450px;
+  font-size: 20px;
   margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
-  background-color: #88a6cc;
   position: relative;
-  border-bottom: 3rem solid rgba(9, 31, 90, 0.298);
-  background-color: #88a6cc;
+  border-bottom: 3rem solid rgba(9, 31, 90, 0.779);
 }
 body main .colonnes .colonnePrincipale .timbre a {
   color: black;
@@ -242,20 +259,19 @@ body main .colonnes .colonnePrincipale .timbre h2 {
 body main .colonnes .colonneSecondaire {
   display: flex;
   flex-direction: column;
-  width: 69%;
+  width: 73%;
   margin-left: 3rem;
   position: absolute;
 }
 body main .colonnes .colonneSecondaire .timbre {
   height: 15rem;
-  width: 50vh;
-  font-size: 30px;
+  width: 450px;
+  font-size: 20px;
   margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
-  background-color: #88a6cc;
   position: relative;
-  border-bottom: 3rem solid rgba(9, 31, 90, 0.298);
+  border-bottom: 3rem solid rgba(9, 31, 90, 0.779);
 }
 body main .colonnes .colonneSecondaire .timbre a {
   color: black;
@@ -276,7 +292,7 @@ body footer {
 }
 
 /*  regles media query*/
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 1750px) {
   .open .toggle .ouvrir {
     display: none;
   }
@@ -300,6 +316,9 @@ body footer {
   }
   body .toggle .fermer {
     display: none;
+  }
+  body header {
+    background-color: transparent;
   }
   body header nav {
     height: 100%;
@@ -333,7 +352,7 @@ body footer {
     padding-bottom: 1rem;
   }
   body main .slider {
-    border-bottom: 3rem solid rgba(9, 31, 90, 0.298);
+    border-bottom: 3rem solid rgba(9, 31, 90, 0.779);
     height: 30vh;
     position: relative;
     width: 45vh;
@@ -341,18 +360,20 @@ body footer {
     margin-top: 2vh;
   }
   body main .colonnes {
+    width: 100%;
+    margin: auto;
     display: flex;
     flex-direction: column;
   }
   body main .colonnes .colonnePrincipale {
-    width: auto;
-    margin: auto;
-  }
-  body main .colonnes .colonneSecondaire {
-    width: auto;
+    width: 100%;
     margin: auto;
     position: relative;
-    justify-content: center;
+  }
+  body main .colonnes .colonneSecondaire {
+    width: 100%;
+    margin: auto;
+    position: relative;
   }
 }
 

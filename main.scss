@@ -4,6 +4,7 @@
         box-sizing: border-box;
         font-size: 16px;
         height: 100%;
+        width: 100%;
     }
     
     *,
@@ -35,6 +36,7 @@
     img {
         max-width: 100%;
         height: auto;
+        cursor: pointer;
     }
     
     a {
@@ -43,6 +45,12 @@
     /*mon style*/
     
     body {
+        width: 100%;
+        .titreVignette {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
         display: flex;
         flex-direction: column;
     }
@@ -52,17 +60,16 @@
     $header-color:#88a6cc;
     $ul-color:#1a01fc;
     $bandeau-color:rgb(9, 30, 90);
-    $liseret-color:rgba(9, 31, 90, 0.298);
+    $liseret-color:rgba(9, 31, 90, 0.779);
     /*mixins*/
     
     @mixin article {
         height: 15rem;
-        width: 50vh;
-        font-size: 30px;
+        width: 450px;
+        font-size: 20px;
         margin-top: 1rem;
         margin-left: auto;
         margin-right: auto;
-        background-color: $header-color;
         position: relative;
         border-bottom: 3rem solid $liseret-color;
         a {
@@ -189,10 +196,22 @@
                 .precedent {
                     left: 1rem;
                 }
+                h2 {
+                    font-size: 40px;
+                    color: black;
+                    position: absolute;
+                    left: 45%;
+                    bottom: -3rem;
+                }
             }
             .colonnes {
+                img {
+                    position: relative;
+                    z-index: -1;
+                }
                 display: flex;
                 flex-direction: row;
+                justify-items: center;
                 width: 101vh;
                 margin: auto;
                 .colonnePrincipale {
@@ -210,7 +229,7 @@
                     margin-right: auto;
                     background-color: $header-color;
                     position: relative;*/
-                        border: 2px solid #bbb;
+                        border: 5px solid #bbb;
                         overflow-wrap: normal;
                         overflow-y: auto;
                         ul {
@@ -231,13 +250,12 @@
                     }
                     .timbre {
                         @include article;
-                        background-color: $header-color;
                     }
                 }
                 .colonneSecondaire {
                     display: flex;
                     flex-direction: column;
-                    width: 69%;
+                    width: 73%;
                     margin-left: 3rem;
                     position: absolute;
                     .timbre {
@@ -257,7 +275,7 @@
     }
     /*  regles media query*/
     
-    @media only screen and (max-width: 991px) {
+    @media only screen and (max-width: 1750px) {
         .open {
             .toggle {
                 .ouvrir {
@@ -288,6 +306,7 @@
                 }
             }
             header {
+                background-color: transparent;
                 nav {
                     height: 100%;
                     width: 100%;
@@ -330,17 +349,19 @@
                     margin-top: 2vh
                 }
                 .colonnes {
+                    width: 100%;
+                    margin: auto;
                     display: flex;
                     flex-direction: column;
                     .colonnePrincipale {
-                        width: auto;
-                        margin: auto;
-                    }
-                    .colonneSecondaire {
-                        width: auto;
+                        width: 100%;
                         margin: auto;
                         position: relative;
-                        justify-content: center;
+                    }
+                    .colonneSecondaire {
+                        width: 100%;
+                        margin: auto;
+                        position: relative;
                     }
                 }
             }
