@@ -82,6 +82,25 @@
             bottom: -3rem;
         }
     }
+     @mixin articleSecondaire {
+        height: 15rem;
+        width: 250px;
+        font-size: 20px;
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        border-bottom: 3rem solid $liseret-color;
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        h2 {
+            font-size: 30px;
+            position: absolute;
+            bottom: -3rem;
+        }
+    }
     
     @mixin bandeau {
         background-color: $bandeau-color;
@@ -160,6 +179,12 @@
             }
         }
         main {
+            display: block;            
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+
+            border: 2px solid white;
             margin-bottom: 2rem;
             .slider {
                 border-bottom: 3rem solid $liseret-color;
@@ -204,6 +229,10 @@
                     bottom: -3rem;
                 }
             }
+            .content{
+                display:block;
+                width:100%;
+                border:2px solid white;
             .colonnes {
                 img {
                     position: relative;
@@ -211,14 +240,18 @@
                 }
                 display: flex;
                 flex-direction: row;
-                justify-items: center;
-                width: 101vh;
-                margin: auto;
+                
+                
+                
+                .colonnePrincipaleContent{
+                    display: block;
+                    width: 50%;
+                    border: 2px solid white;
                 .colonnePrincipale {
                     display: flex;
                     flex-direction: column;
                     margin-right: 2rem;
-                    width: 10vh;
+                    
                     position: relative;
                     .actu {
                         @include article;
@@ -251,17 +284,19 @@
                     .timbre {
                         @include article;
                     }
-                }
+                }}
+                .colonneSecondaireContent{
+                    display: block;
+                    border: 2px solid white;
                 .colonneSecondaire {
                     display: flex;
-                    flex-direction: column;
-                    width: 73%;
+                    flex-direction: column;                    
                     margin-left: 3rem;
                     position: absolute;
                     .timbre {
-                        @include article;
+                        @include articleSecondaire;
                     }
-                }
+                }}}
             }
         }
         footer {
@@ -275,7 +310,7 @@
     }
     /*  regles media query*/
     
-    @media only screen and (max-width: 1750px) {
+    @media only screen and (max-width: 991px) {
         .open {
             .toggle {
                 .ouvrir {

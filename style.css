@@ -130,6 +130,11 @@ body header nav ul li a {
   text-decoration: none;
 }
 body main {
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid white;
   margin-bottom: 2rem;
 }
 body main .slider {
@@ -175,25 +180,31 @@ body main .slider h2 {
   left: 45%;
   bottom: -3rem;
 }
-body main .colonnes {
+body main .content {
+  display: block;
+  width: 100%;
+  border: 2px solid white;
+}
+body main .content .colonnes {
   display: flex;
   flex-direction: row;
-  justify-items: center;
-  width: 101vh;
-  margin: auto;
 }
-body main .colonnes img {
+body main .content .colonnes img {
   position: relative;
   z-index: -1;
 }
-body main .colonnes .colonnePrincipale {
+body main .content .colonnes .colonnePrincipaleContent {
+  display: block;
+  width: 50%;
+  border: 2px solid white;
+}
+body main .content .colonnes .colonnePrincipaleContent .colonnePrincipale {
   display: flex;
   flex-direction: column;
   margin-right: 2rem;
-  width: 10vh;
   position: relative;
 }
-body main .colonnes .colonnePrincipale .actu {
+body main .content .colonnes .colonnePrincipaleContent .colonnePrincipale .actu {
   height: 15rem;
   width: 450px;
   font-size: 20px;
@@ -213,16 +224,16 @@ body main .colonnes .colonnePrincipale .actu {
   overflow-wrap: normal;
   overflow-y: auto;
 }
-body main .colonnes .colonnePrincipale .actu a {
+body main .content .colonnes .colonnePrincipaleContent .colonnePrincipale .actu a {
   color: black;
   text-decoration: none;
 }
-body main .colonnes .colonnePrincipale .actu h2 {
+body main .content .colonnes .colonnePrincipaleContent .colonnePrincipale .actu h2 {
   font-size: 30px;
   position: absolute;
   bottom: -3rem;
 }
-body main .colonnes .colonnePrincipale .actu ul {
+body main .content .colonnes .colonnePrincipaleContent .colonnePrincipale .actu ul {
   height: 15rem;
   text-justify: auto;
   display: flex;
@@ -231,13 +242,13 @@ body main .colonnes .colonnePrincipale .actu ul {
   margin-right: 5%;
   position: center;
 }
-body main .colonnes .colonnePrincipale .actu ul li {
+body main .content .colonnes .colonnePrincipaleContent .colonnePrincipale .actu ul li {
   text-align: left;
   margin-left: 1%;
   margin-bottom: 1%;
   padding: 0, 5rem;
 }
-body main .colonnes .colonnePrincipale .timbre {
+body main .content .colonnes .colonnePrincipaleContent .colonnePrincipale .timbre {
   height: 15rem;
   width: 450px;
   font-size: 20px;
@@ -247,25 +258,28 @@ body main .colonnes .colonnePrincipale .timbre {
   position: relative;
   border-bottom: 3rem solid rgba(9, 31, 90, 0.779);
 }
-body main .colonnes .colonnePrincipale .timbre a {
+body main .content .colonnes .colonnePrincipaleContent .colonnePrincipale .timbre a {
   color: black;
   text-decoration: none;
 }
-body main .colonnes .colonnePrincipale .timbre h2 {
+body main .content .colonnes .colonnePrincipaleContent .colonnePrincipale .timbre h2 {
   font-size: 30px;
   position: absolute;
   bottom: -3rem;
 }
-body main .colonnes .colonneSecondaire {
+body main .content .colonnes .colonneSecondaireContent {
+  display: block;
+  border: 2px solid white;
+}
+body main .content .colonnes .colonneSecondaireContent .colonneSecondaire {
   display: flex;
   flex-direction: column;
-  width: 73%;
   margin-left: 3rem;
   position: absolute;
 }
-body main .colonnes .colonneSecondaire .timbre {
+body main .content .colonnes .colonneSecondaireContent .colonneSecondaire .timbre {
   height: 15rem;
-  width: 450px;
+  width: 250px;
   font-size: 20px;
   margin-top: 1rem;
   margin-left: auto;
@@ -273,11 +287,11 @@ body main .colonnes .colonneSecondaire .timbre {
   position: relative;
   border-bottom: 3rem solid rgba(9, 31, 90, 0.779);
 }
-body main .colonnes .colonneSecondaire .timbre a {
+body main .content .colonnes .colonneSecondaireContent .colonneSecondaire .timbre a {
   color: black;
   text-decoration: none;
 }
-body main .colonnes .colonneSecondaire .timbre h2 {
+body main .content .colonnes .colonneSecondaireContent .colonneSecondaire .timbre h2 {
   font-size: 30px;
   position: absolute;
   bottom: -3rem;
@@ -292,7 +306,7 @@ body footer {
 }
 
 /*  regles media query*/
-@media only screen and (max-width: 1750px) {
+@media only screen and (max-width: 991px) {
   .open .toggle .ouvrir {
     display: none;
   }
