@@ -49,12 +49,29 @@ body {
 /*variables*/
 /*mixins*/
 body {
+  font-family: sans-serif;
   background: #515666;
+}
+body .toggle {
+  display: none;
+}
+body .btn {
+  border: 0;
+  font-size: 30px;
+  color: white;
+  background-color: #515666;
+  cursor: pointer;
+  border-radius: 20px;
+}
+body .btn-Connexion {
+  background: transparent;
+  border: 2px solid #515666;
+  color: white;
 }
 body header {
   display: flex;
   flex-direction: column;
-  background: #88a6cc;
+  background: #515666;
   width: justify;
   height: 10rem;
 }
@@ -69,7 +86,13 @@ body header h1 {
   text-align: center;
   font-size: 3rem;
 }
+body header .ouvrir,
+body header .fermer {
+  color: white;
+}
 body header nav {
+  justify-content: space-between;
+  align-items: center;
   position: absolute;
   bottom: 25%;
   right: 0px;
@@ -86,6 +109,7 @@ body header nav ul {
   color: white;
   width: 100%;
   margin-right: 5%;
+  text-align: center;
 }
 body header nav ul li {
   text-align: center;
@@ -252,17 +276,61 @@ body footer {
 }
 
 /*  regles media query*/
-/*galaxynote20*/
-@media only screen and (max-width: 1500px) {
-  body header nav {
+@media only screen and (max-width: 991px) {
+  .open .toggle .ouvrir {
+    display: none;
+  }
+  .open .toggle .fermer {
+    display: block;
+  }
+  .open .menu {
+    transform: translateX(0);
+  }
+  body .toggle {
+    margin: 1rem;
+    float: none;
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
     position: absolute;
+    z-index: 20;
+  }
+  body .toggle .ouvrir {
+    display: block;
+  }
+  body .toggle .fermer {
+    display: none;
+  }
+  body header nav {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
     bottom: 0;
     right: 0px;
   }
+  body header nav .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    z-index: 10;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+  }
   body header nav ul {
-    margin: auto;
+    background-color: rgb(9, 30, 90);
+    margin: 0;
     display: flex;
     flex-direction: column;
+  }
+  body header nav ul li {
+    margin-left: 0;
+    padding-right: 0;
+    padding-bottom: 1rem;
   }
   body main .slider {
     border-bottom: 3rem solid rgba(9, 31, 90, 0.298);
@@ -284,6 +352,7 @@ body footer {
     width: auto;
     margin: auto;
     position: relative;
+    justify-content: center;
   }
 }
 
