@@ -232,6 +232,7 @@
             .content{
                 display:block;
                 width:100%;
+                
                 border:2px solid white;
             .colonnes {
                 img {
@@ -375,30 +376,46 @@
                 }
             }
             main {
+                width: 100%;
+                
                 .slider {
                     border-bottom: 3rem solid $liseret-color;
                     height: 30vh;
                     position: relative;
-                    width: 45vh;
+                    width: 100%;
                     margin: auto;
                     margin-top: 2vh
                 }
-                .colonnes {
+                .content{  
+                    width: 100%;
+                                     
+                    .colonnes {
                     width: 100%;
                     margin: auto;
                     display: flex;
+                    flex-wrap: wrap;
                     flex-direction: column;
-                    .colonnePrincipale {
+                    .colonnePrincipaleContent{
                         width: 100%;
-                        margin: auto;
-                        position: relative;
+                        .colonnePrincipale{
+                            width: 100%;
+                        }
+
                     }
-                    .colonneSecondaire {
-                        width: 100%;
-                        margin: auto;
-                        position: relative;
+                    .colonneSecondaireContent{
+                        width: 100%; 
+                        border: 10px solid blue; 
+                        height: 800px;                  
+                        
+                        .colonneSecondaire{
+                            width: 100%;
+                            border: 10px solid red;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
                     }
+                    
                 }
-            }
+            }}
         }
     }

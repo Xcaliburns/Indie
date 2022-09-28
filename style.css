@@ -365,29 +365,43 @@ body footer {
     padding-right: 0;
     padding-bottom: 1rem;
   }
+  body main {
+    width: 100%;
+  }
   body main .slider {
     border-bottom: 3rem solid rgba(9, 31, 90, 0.779);
     height: 30vh;
     position: relative;
-    width: 45vh;
+    width: 100%;
     margin: auto;
     margin-top: 2vh;
   }
-  body main .colonnes {
+  body main .content {
+    width: 100%;
+  }
+  body main .content .colonnes {
     width: 100%;
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
   }
-  body main .colonnes .colonnePrincipale {
+  body main .content .colonnes .colonnePrincipaleContent {
     width: 100%;
-    margin: auto;
-    position: relative;
   }
-  body main .colonnes .colonneSecondaire {
+  body main .content .colonnes .colonnePrincipaleContent .colonnePrincipale {
     width: 100%;
-    margin: auto;
-    position: relative;
+  }
+  body main .content .colonnes .colonneSecondaireContent {
+    width: 100%;
+    border: 10px solid blue;
+    height: 800px;
+  }
+  body main .content .colonnes .colonneSecondaireContent .colonneSecondaire {
+    width: 100%;
+    border: 10px solid red;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
