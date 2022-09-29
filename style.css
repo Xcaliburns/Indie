@@ -76,6 +76,10 @@ body .btn-Connexion {
   border: 2px solid #515666;
   color: white;
 }
+body .bodyFlex {
+  display: flex;
+  flex-direction: column;
+}
 body header {
   display: flex;
   flex-direction: column;
@@ -134,14 +138,13 @@ body main {
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid white;
   margin-bottom: 2rem;
 }
 body main .slider {
   border-bottom: 3rem solid rgba(9, 31, 90, 0.779);
   height: 50vh;
   position: relative;
-  width: 102vh;
+  width: 100vh;
   margin: auto;
   margin-top: 2vh;
 }
@@ -183,7 +186,6 @@ body main .slider h2 {
 body main .content {
   display: block;
   width: 100%;
-  border: 2px solid white;
 }
 body main .content .colonnes {
   display: flex;
@@ -195,8 +197,7 @@ body main .content .colonnes img {
 }
 body main .content .colonnes .colonnePrincipaleContent {
   display: block;
-  width: 50%;
-  border: 2px solid white;
+  width: 65vh;
 }
 body main .content .colonnes .colonnePrincipaleContent .colonnePrincipale {
   display: flex;
@@ -206,13 +207,20 @@ body main .content .colonnes .colonnePrincipaleContent .colonnePrincipale {
 }
 body main .content .colonnes .colonnePrincipaleContent .colonnePrincipale .actu {
   height: 15rem;
-  width: 450px;
+  width: 50vh;
+  background-color: white;
+  z-index: -10;
+  padding: 5px;
+  border: 3px solid black;
   font-size: 20px;
+  text-align: center;
+  color: white;
   margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
   position: relative;
   border-bottom: 3rem solid rgba(9, 31, 90, 0.779);
+  z-index: 1;
   /*width: 50vh;
   font-size: 30px;
   margin-top: 2rem;
@@ -220,7 +228,6 @@ body main .content .colonnes .colonnePrincipaleContent .colonnePrincipale .actu 
   margin-right: auto;
   background-color: $header-color;
   position: relative;*/
-  border: 5px solid #bbb;
   overflow-wrap: normal;
   overflow-y: auto;
 }
@@ -250,8 +257,14 @@ body main .content .colonnes .colonnePrincipaleContent .colonnePrincipale .actu 
 }
 body main .content .colonnes .colonnePrincipaleContent .colonnePrincipale .timbre {
   height: 15rem;
-  width: 450px;
+  width: 50vh;
+  background-color: white;
+  z-index: -10;
+  padding: 5px;
+  border: 3px solid black;
   font-size: 20px;
+  text-align: center;
+  color: white;
   margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
@@ -269,7 +282,7 @@ body main .content .colonnes .colonnePrincipaleContent .colonnePrincipale .timbr
 }
 body main .content .colonnes .colonneSecondaireContent {
   display: block;
-  border: 2px solid white;
+  width: 35vh;
 }
 body main .content .colonnes .colonneSecondaireContent .colonneSecondaire {
   display: flex;
@@ -278,9 +291,16 @@ body main .content .colonnes .colonneSecondaireContent .colonneSecondaire {
   position: absolute;
 }
 body main .content .colonnes .colonneSecondaireContent .colonneSecondaire .timbre {
-  height: 15rem;
-  width: 250px;
+  display: block;
+  background-color: white;
+  z-index: -10;
+  padding: 5px;
+  border: 2px solid black;
+  height: 10rem;
+  width: 25vh;
   font-size: 20px;
+  text-align: center;
+  color: white;
   margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
@@ -292,7 +312,7 @@ body main .content .colonnes .colonneSecondaireContent .colonneSecondaire .timbr
   text-decoration: none;
 }
 body main .content .colonnes .colonneSecondaireContent .colonneSecondaire .timbre h2 {
-  font-size: 30px;
+  font-size: 25px;
   position: absolute;
   bottom: -3rem;
 }
@@ -315,6 +335,10 @@ body footer {
   }
   .open .menu {
     transform: translateX(0);
+  }
+  body {
+    display: flex;
+    flex-direction: column;
   }
   body .toggle {
     margin: 1rem;
@@ -394,14 +418,32 @@ body footer {
   }
   body main .content .colonnes .colonneSecondaireContent {
     width: 100%;
-    border: 10px solid blue;
     height: 800px;
   }
   body main .content .colonnes .colonneSecondaireContent .colonneSecondaire {
     width: 100%;
-    border: 10px solid red;
     margin-left: auto;
     margin-right: auto;
+  }
+  body main .content .colonnes .colonneSecondaireContent .colonneSecondaire .timbre {
+    height: 15rem;
+    width: 50vh;
+    font-size: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border-bottom: 3rem solid rgba(9, 31, 90, 0.779);
+  }
+  body main .content .colonnes .colonneSecondaireContent .colonneSecondaire .timbre a {
+    color: black;
+    text-decoration: none;
+  }
+  body main .content .colonnes .colonneSecondaireContent .colonneSecondaire .timbre h2 {
+    font-size: 30px;
+    position: absolute;
+    bottom: -3rem;
   }
 }
 

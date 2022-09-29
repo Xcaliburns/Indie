@@ -65,8 +65,14 @@
     
     @mixin article {
         height: 15rem;
-        width: 450px;
+        width: 50vh;
+        background-color: white;
+        z-index: -10;
+        padding: 5px;
+        border: 3px solid black;
         font-size: 20px;
+        text-align: center;
+        color: white;
         margin-top: 1rem;
         margin-left: auto;
         margin-right: auto;
@@ -80,13 +86,42 @@
             font-size: 30px;
             position: absolute;
             bottom: -3rem;
+            
         }
     }
      @mixin articleSecondaire {
-        height: 15rem;
-        width: 250px;
+        display: block;
+        background-color: white;
+        z-index: -10;
+        padding: 5px;
+        border: 2px solid black;
+        height: 10rem;
+        width:25vh;
         font-size: 20px;
+        text-align: center;
+        color: white;
         margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        border-bottom: 3rem solid $liseret-color;
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        h2 {
+            font-size: 25px;
+            position: absolute;
+            bottom: -3rem;
+
+        }
+    }
+     @mixin articleSecondaireMediaQuery {
+        height: 15rem;
+        width: 50vh;
+        font-size: 10px;
+        margin-top: 2px;
+        margin-bottom: 2px;
         margin-left: auto;
         margin-right: auto;
         position: relative;
@@ -128,6 +163,10 @@
             color: white;
         }
         background: $base-color;
+        .bodyFlex{
+            display: flex;
+            flex-direction: column;
+        }
         header {
             display: flex;
             flex-direction: column;
@@ -183,14 +222,13 @@
             width: fit-content;
             margin-left: auto;
             margin-right: auto;
-
-            border: 2px solid white;
+            
             margin-bottom: 2rem;
             .slider {
                 border-bottom: 3rem solid $liseret-color;
                 height: 50vh;
                 position: relative;
-                width: 102vh;
+                width: 100vh;
                 margin: auto;
                 margin-top: 2vh;
                 img {
@@ -233,29 +271,31 @@
                 display:block;
                 width:100%;
                 
-                border:2px solid white;
+                
             .colonnes {
                 img {
                     position: relative;
                     z-index: -1;
                 }
                 display: flex;
-                flex-direction: row;
-                
+                flex-direction: row;           
                 
                 
                 .colonnePrincipaleContent{
                     display: block;
-                    width: 50%;
-                    border: 2px solid white;
+                    
+                    
+                    width: 65vh;
                 .colonnePrincipale {
                     display: flex;
                     flex-direction: column;
                     margin-right: 2rem;
                     
+                    
                     position: relative;
                     .actu {
                         @include article;
+                        z-index: 1;
                         /*width: 50vh;
                     font-size: 30px;
                     margin-top: 2rem;
@@ -263,7 +303,7 @@
                     margin-right: auto;
                     background-color: $header-color;
                     position: relative;*/
-                        border: 5px solid #bbb;
+                        
                         overflow-wrap: normal;
                         overflow-y: auto;
                         ul {
@@ -287,8 +327,8 @@
                     }
                 }}
                 .colonneSecondaireContent{
-                    display: block;
-                    border: 2px solid white;
+                    display: block;                    
+                    width: 35vh;
                 .colonneSecondaire {
                     display: flex;
                     flex-direction: column;                    
@@ -341,6 +381,9 @@
                     display: none;
                 }
             }
+            
+                display: flex;
+                flex-direction: column;
             header {
                 background-color: transparent;
                 nav {
@@ -387,8 +430,7 @@
                     margin-top: 2vh
                 }
                 .content{  
-                    width: 100%;
-                                     
+                    width: 100%;                                     
                     .colonnes {
                     width: 100%;
                     margin: auto;
@@ -403,15 +445,16 @@
 
                     }
                     .colonneSecondaireContent{
-                        width: 100%; 
-                        border: 10px solid blue; 
-                        height: 800px;                  
-                        
+                        width: 100%;                         
+                        height: 800px;           
                         .colonneSecondaire{
                             width: 100%;
-                            border: 10px solid red;
+                            
                             margin-left: auto;
                             margin-right: auto;
+                            .timbre{
+                                @include articleSecondaireMediaQuery;
+                            }
                         }
                     }
                     
